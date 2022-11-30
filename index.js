@@ -28,4 +28,5 @@ class game {
     
     constructor()
 }
-console.log(naam);
+
+console.log("working...")
