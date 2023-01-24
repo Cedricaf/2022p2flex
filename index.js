@@ -1,7 +1,5 @@
 
-
-
-class player {
+class Player {
 
     constructor(index)
     {
@@ -14,7 +12,7 @@ class player {
 
 }
 
-class tile {
+class Tile {
 
     constructor(div)
     {
@@ -24,7 +22,7 @@ class tile {
 
 }
 
-class game {
+class Game {
     
     constructor()
     {
@@ -54,7 +52,6 @@ class game {
         let y = 10;
         let tileSize = 55;
     
-
         for (var i = 0; i < path.length; i++)
         {
             let cmd = path[i];
@@ -69,19 +66,19 @@ class game {
             else if(cmd == 0)
             {
                 y--;
-            this.makeBoardDiv(x*tileSize, y*tileSize, i+1);
+            }
+            let div = this.makeBoardDiv(x * tileSize, y * tileSize, i + 1);
             let tile = new Tile(div);
             this.tiles.push(tile);
-
-
-        }
-
-        this.setupGotos();
+        }     
     }
     setupGotos()
     {
         let goto = [[6, 14], [16, 4], [17, 23], [27, 33], [29, 10], [38, 43], [39, 20], [45, 34]];
         let element = goto[0];
+        let start = element[0] - 1;
+        let tile = this.tiles[start];
+        tile.goto = end;
         console.log(element);
 
     }
@@ -113,11 +110,11 @@ class game {
         div.style.top = y + "px";
         div.textContent = tileDisplayNumber;
         this.boardDiv.appendChild(div);
-
+ 
         return div;
     }
 
 
 }
-}
-console.log("working...")
+
+
