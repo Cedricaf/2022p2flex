@@ -19,6 +19,7 @@ body{
 
 .ui{
     margin-top: 2px;
+
 }
 
 .roll {
@@ -37,6 +38,11 @@ body{
 }
 
 .board {
+    width: 600px;
+    height: 600px;
+}
+
+.boardoverlay {
     top: 0px;
     position: absolute;
     width: 600px;
@@ -45,8 +51,8 @@ body{
 }
 
 .pawn {
-    top: 0px;
     position: absolute;
+    top: 0px;
     background-size: contain;
     width: 20px;
     height: 20px;
@@ -58,9 +64,11 @@ body{
 }
 .pawn1 {
     background-image:url('img/pawn1.png');
-}.pawn2 {
+}
+.pawn2 {
     background-image:url('img/pawn2.png');
-}.pawn3 {
+}
+.pawn3 {
     background-image:url('img/pawn3.png');
 }
 
