@@ -53,8 +53,9 @@ class game {
         let x = 0;
         let y = 10;
         let tileSize = 55;
+    
 
-        for (let i = 0; i < path.length; i++)
+        for (var i = 0; i < path.length; i++)
         {
             let cmd = path[i];
             if(cmd == 1)
@@ -68,7 +69,7 @@ class game {
             else if(cmd == 0)
             {
                 y--;
-            let this.makeBoardDiv(x*tileSize, y*tileSize, i+1);
+            this.makeBoardDiv(x*tileSize, y*tileSize, i+1);
             let tile = new Tile(div);
             this.tiles.push(tile);
 
